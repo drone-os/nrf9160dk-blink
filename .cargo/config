@@ -1,0 +1,13 @@
+[build]
+target = 'thumbv8m.main-none-eabihf'
+rustflags = [
+    '--cfg', 'cortexm_core="cortexm33f_r0p2"',
+    '--cfg', 'nrf_mcu="nrf9160"',
+]
+
+[target.thumbv8m.main-none-eabihf]
+rustflags = [
+    '--cfg', 'cortexm_core="cortexm33f_r0p2"',
+    '--cfg', 'nrf_mcu="nrf9160"',
+    '-C', 'linker=drone-ld',
+]
